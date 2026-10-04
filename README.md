@@ -29,13 +29,16 @@ flowchart LR
 
 ## Results
 
-   | Static rule (TRANSFER, amount > 200,000) | 6,409 | 453 / 1,366 | 0.071 | 0.332 | 1,172,044,129 | 64,090 | 1,171,980,039 |
-   | GBT model (threshold 0.10) | 1,364 | 1,364 / 1,366 | 1.000 | 0.999 | 2,340,344,242 | 13,640 | 2,340,330,602 |
+   Test period only (steps 621 and later):
 
-   AUC-PR (test): 0.9993
+| Strategy | Alerts | Fraud caught | Precision | Recall | Fraud value stopped | Review cost | Net saving |
+|---|---|---|---|---|---|---|---|
+| Static rule (TRANSFER, amount > 200,000) | 6,409 | 453 / 1,366 | 0.071 | 0.332 | 1,172,044,129 | 64,090 | 1,171,980,039 |
+| GBT model (threshold 0.10) | 1,364 | 1,364 / 1,366 | 1.000 | 0.999 | 2,340,344,242 | 13,640 | 2,340,330,602 |
 
-      Amounts are in PaySim's simulated currency units. Near-perfect scores are typical for PaySim, whose fraud follows a simple, learnable pattern (drained accounts, balances that don't add up). Real-world fraud is much harder, so treat this as a pipeline demonstration, not a claim about production accuracy.
+AUC-PR (test): 0.9993
 
+Amounts are in PaySim's simulated currency units. Near-perfect scores are typical for PaySim, whose fraud follows a simple, learnable pattern (drained accounts, balances that don't add up). Real-world fraud is much harder, so treat this as a pipeline demonstration, not a claim about production accuracy.
 ## Project structure
 
 ```
