@@ -1,0 +1,5 @@
+   data/*.csv
+   models/
+   checkpoints/
+   __pycache__/
+   .env
